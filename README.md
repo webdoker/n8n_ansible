@@ -63,4 +63,4 @@ http://<IP_сервера>:5678
 	•	DevOps-инженерам, которым важно автоматизировать развёртывание.
 	•	Разработчикам, кто хочет быстро поднять n8n локально.
 	•	Командам, применяющим подход “инфраструктура как код”.
- С любовью https://webdoka.ru/blog/software/avtomaticheskaya-ustanovka-i-nastroyka-n8n-s-pomoshchyu-ansible/
+ С любовью webdoka
