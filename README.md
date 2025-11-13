@@ -1,63 +1,76 @@
-Вот структура файлов архива n8n-ansible.zip:
+# n8n-ansible
 
+## Structure of the `n8n-ansible.zip` Archive
+
+```
 n8n-ansible/
 ├── files/
 │   └── docker-compose.yml
 ├── install_n8n.yml
 ├── inventory
 ├── run_n8n_install.sh
+```
 
+---
 
-⸻
+## Overview
 
-n8n-ansible
+A ready-to-use solution for automated installation of **n8n** on a server using **Ansible** and **Docker**.
 
-Готовое решение для автоматизированной установки n8n на сервер с использованием Ansible и Docker.
+## What This Project Does
 
-Что делает этот проект
-	•	Устанавливает необходимые пакеты: Docker, docker-compose, nginx, openssl.
-	•	Создаёт директории и конфигурации для n8n.
-	•	Генерирует самоподписанный SSL-сертификат.
-	•	Копирует настройки из files/docker-compose.yml.
-	•	Настраивает обратный прокси на nginx (если нужно).
-	•	Запускает n8n на порту 5678.
-	•	Всё это выполняется одной командой.
+- Installs required packages: Docker, docker-compose, nginx, openssl  
+- Creates directories and configuration files for n8n  
+- Generates a self-signed SSL certificate  
+- Copies settings from `files/docker-compose.yml`  
+- Configures nginx reverse proxy (if needed)  
+- Launches n8n on port **5678**  
+- Performs all actions with a single command  
 
-Состав проекта
+## Project Contents
 
+```
 n8n-ansible/
 ├── files/
-│   └── docker-compose.yml         — конфигурация Docker-контейнера
-├── install_n8n.yml                — основной Ansible playbook
-├── inventory                      — описание хоста (localhost по умолчанию)
-├── run_n8n_install.sh             — скрипт запуска установки
+│   └── docker-compose.yml         — Docker container configuration
+├── install_n8n.yml                — main Ansible playbook
+├── inventory                      — host definition (localhost by default)
+├── run_n8n_install.sh             — installation launch script
+```
 
-Как использовать
-	1.	Клонируйте или скачайте этот репозиторий на сервер.
-	2.	Перейдите в папку:
+## How to Use
 
-cd n8n-ansible
+1. Clone or download this repository to your server  
+2. Navigate into the folder:
 
+   ```bash
+   cd n8n-ansible
+   ```
 
-	3.	Дайте права на выполнение:
+3. Make the script executable:
 
-chmod +x run_n8n_install.sh
+   ```bash
+   chmod +x run_n8n_install.sh
+   ```
 
+4. Run the installation:
 
-	4.	Запустите установку:
+   ```bash
+   ./run_n8n_install.sh
+   ```
 
-./run_n8n_install.sh
+## Result
 
+After execution, you will have a fully working instance of **n8n**, accessible in your browser at:
 
+```
+http://<server_IP>:5678
+```
 
-Результат
+## Who This Is For
 
-После выполнения вы получите полностью рабочий экземпляр n8n, доступный в браузере по адресу:
+- DevOps engineers who want automated deployment  
+- Developers who need a quick n8n setup locally  
+- Teams using the “infrastructure as code” approach  
 
-http://<IP_сервера>:5678
-
-Кому подойдёт
-	•	DevOps-инженерам, которым важно автоматизировать развёртывание.
-	•	Разработчикам, кто хочет быстро поднять n8n локально.
-	•	Командам, применяющим подход “инфраструктура как код”.
- С любовью webdoka
+With love, **webdoka**
