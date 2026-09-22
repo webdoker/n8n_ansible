@@ -73,4 +73,4 @@ http://<server_IP>:5678
 - Developers who need a quick n8n setup locally  
 - Teams using the “infrastructure as code” approach  
 
-With love, **webdoka**
+With love, **https://webdoka.ru/**
